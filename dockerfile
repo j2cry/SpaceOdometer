@@ -1,4 +1,5 @@
 FROM python:3.9-slim
+MAINTAINER fragarie 'fragarie@yandex.com'
 RUN python3 -m venv /space_odometer/venv
 COPY requirements.txt /space_odometer/
 RUN /space_odometer/venv/bin/pip3 install -r /space_odometer/requirements.txt
