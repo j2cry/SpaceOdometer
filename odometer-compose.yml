@@ -1,0 +1,16 @@
+version: "3"
+services:
+  space-odometer:
+    image: space_odometer_image
+    container_name: odometer
+    expose:
+      - 55301
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.space-odometer.rule=PathPrefix(`/space-odometer`)
+    networks:
+      - revproxy
+
+networks:
+  revproxy:
+    external: true

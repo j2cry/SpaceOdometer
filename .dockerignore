@@ -5,3 +5,7 @@ __pycache__/
 docker/
 dockerfile
 .dockerignore
+docker-compose.yml
+odometer-compose.yml
+space_odometer_image.tar
+update_image.sh

@@ -1,4 +1,5 @@
-let socket = io();
+let socket = io({path: serviceURL + '/socket.io'});
+//let socket = io({path: serviceURL + '/socket.io', transports: ['websocket', 'polling']});
 
 $(document).ready(function () {
     let placemark;
