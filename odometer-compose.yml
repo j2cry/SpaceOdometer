@@ -8,9 +8,3 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.space-odometer.rule=PathPrefix(`/space-odometer`)
-    networks:
-      - revproxy
-
-networks:
-  revproxy:
-    external: true
