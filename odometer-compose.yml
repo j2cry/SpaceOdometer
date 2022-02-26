@@ -8,3 +8,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.space-odometer.rule=PathPrefix(`/space-odometer`)
+      -
+      - traefik.http.services.todo.loadbalancer.sticky=true
+      - traefik.http.services.todo.loadbalancer.sticky.cookie.name=space-odometer-sticky-cookie
+      - traefik.http.services.todo.loadbalancer.sticky.cookie.httpOnly=true
